@@ -1,121 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>3D Modern Website</title>
-
-<style>
-  body {
-    margin: 0;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
-    background: #0a0a0a;
-    color: white;
-  }
-
-  canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  .content {
-    position: relative;
-    z-index: 10;
-    padding: 100px;
-  }
-
-  h1 {
-    font-size: 60px;
-  }
-
-  p {
-    font-size: 20px;
-    max-width: 500px;
-  }
-
-  .glass {
-    backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 20px;
-    margin-top: 30px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Ocean UI Pro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="content">
-  <h1>3D Website</h1>
-  <p>Modern futuristic 3D design with animations</p>
+<div class="container">
 
-  <div class="glass">
-    Scroll down for effects 👇
+  <!-- Navbar -->
+  <nav>
+    <h2 class="logo">Amway</h2>
+    <ul>
+      <li class="active">HOME</li>
+      <li>ABOUT</li>
+      <li>PRODUCTS</li>
+      <li>SERVICE</li>
+      <li>CONTACT</li>
+    </ul>
+  </nav>
+
+  <!-- Slider -->
+  <div class="hero">
+
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')">
+      <div class="overlay"></div>
+
+      <div class="content">
+        <div class="left">
+          <h1>Happiness<br>comes<br>in waves</h1>
+          <p>Feel the ocean vibes with smooth UI design</p>
+          <button>READ MORE</button>
+        </div>
+
+        <div class="right">
+          <h1>FLOW<br>WITH<br>IT</h1>
+          <span id="counter">01 / 03</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e')"></div>
+
   </div>
+
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-<script>
-  const scene = new THREE.Scene();
-
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    window.innerWidth/window.innerHeight,
-    0.1,
-    1000
-  );
-
-  const renderer = new THREE.WebGLRenderer({ alpha: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  document.body.appendChild(renderer.domElement);
-
-  // Geometry
-  const geometry = new THREE.TorusKnotGeometry(1, 0.3, 100, 16);
-  const material = new THREE.MeshStandardMaterial({
-    color: 0x00ffff,
-    metalness: 0.8,
-    roughness: 0.2
-  });
-
-  const shape = new THREE.Mesh(geometry, material);
-  scene.add(shape);
-
-  // Light
-  const light = new THREE.PointLight(0xffffff, 1);
-  light.position.set(5,5,5);
-  scene.add(light);
-
-  camera.position.z = 5;
-
-  // Mouse movement
-  document.addEventListener("mousemove", (e) => {
-    let x = (e.clientX / window.innerWidth - 0.5) * 2;
-    let y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-    shape.rotation.y = x * 2;
-    shape.rotation.x = y * 2;
-  });
-
-  // Scroll animation
-  window.addEventListener("scroll", () => {
-    let scroll = window.scrollY;
-    shape.rotation.z = scroll * 0.01;
-  });
-
-  function animate() {
-    requestAnimationFrame(animate);
-
-    shape.rotation.x += 0.01;
-    shape.rotation.y += 0.01;
-
-    renderer.render(scene, camera);
-  }
-
-  animate();
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
