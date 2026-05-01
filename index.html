@@ -3,46 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceEdu | Explore Earth</title>
+    <title>SpaceEdu | Cinematic Experience</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="stars-bg"></div>
+    <div class="glow-overlay"></div>
 
     <nav class="navbar">
         <div class="logo">spaceedu</div>
         <div class="nav-links">
-            <span>Planets</span>
-            <span>Trailer</span>
-            <span>Tickets</span>
-            <span>Blog</span>
+            <a href="#">Planets</a>
+            <a href="#">Trailer</a>
+            <a href="#">Tickets</a>
+            <a href="#">Blog</a>
         </div>
         <button class="enroll-btn">Enroll</button>
     </nav>
 
-    <div class="scroll-container">
-        <section class="panel hero">
+    <main class="scroll-container">
+        <section class="section hero" id="home">
             <div class="content">
-                <p class="subtitle">PLANET</p>
-                <h1>EARTH</h1>
-                <p class="desc">Learn more about this fascinating miracle that we call our home, Planet Earth. Course enrollment starts today.</p>
-                <button class="btn-main">GET STARTED</button>
+                <p class="eyebrow">PLANET</p>
+                <h1 class="glitch">EARTH</h1>
+                <p class="description">
+                    Learn more about this fascinating miracle that we call our home, Planet Earth. 
+                    Course enrollment starts today. Early Bird tickets typically last a week, don't miss out!
+                </p>
+                <button class="btn-primary">GET STARTED</button>
             </div>
+            
+            <div class="side-indicator left">VENUS</div>
+            <div class="side-indicator right">MARS</div>
+            <div class="scroll-hint"><span></span></div>
         </section>
 
-        <section class="panel details">
-            <div class="content-left">
-                <p class="subtitle">THE BLUE PLANET</p>
+        <section class="section details" id="about">
+            <div class="info-card">
+                <p class="eyebrow">THE BLUE PLANET</p>
                 <h2>EARTH</h2>
-                <p class="desc">Earth is the third planet from the Sun. It is the only astronomical object known to harbor life.</p>
-                <button class="btn-main">LEARN MORE</button>
+                <p>Earth is the third planet from the sun. Earth's axis of rotation is tilted with respect to its orbital plane, producing seasons on Earth.</p>
+                <button class="btn-outline">LEARN MORE</button>
             </div>
         </section>
-    </div>
+    </main>
 
-    <div class="planet-wrapper">
-        <div class="planet-shadow"></div>
-        <div class="earth"></div>
+    <div class="planet-container">
+        <div class="earth-sphere">
+            <div class="atmosphere"></div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
