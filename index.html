@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wix Style -PRI NETWORK </title>
+    <title>Wix Style - PRIYASH RAWAT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #fff; overflow-x: hidden; }
         
-        /* Hero Gradient Background */
+        /* Hero Gradient Background - Adjusted to match Image 3 sunset vibe */
         .hero-section {
-            background: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #74EBD5 100%);
+            background: linear-gradient(180deg, #F98866 0%, #FFB284 30%, #E2C2B3 70%, #fff 100%);
             min-height: 100vh;
         }
 
-        /* The "Waterfall" Path Effect */
-        .pathway {
+        /* WATERFALL BACKGROUND:
+           Jab aapke paas waterfall ki lambi image aa jaye, uska URL yahan daalein.
+           Abhi ke liye maine ek better gradient path banaya hai.
+        */
+        .pathway-container {
             position: absolute;
-            width: 120px;
-            background: linear-gradient(180deg, #A2D2FF, #5DADE2);
-            filter: blur(20px);
-            opacity: 0.6;
-            z-index: 0;
+            top: 50vh;
             left: 50%;
             transform: translateX(-50%);
+            width: 100%;
+            max-width: 800px;
+            height: 4000px;
+            z-index: 0;
+            /* Placeholder gradient for waterfall */
+            background: radial-gradient(circle at center, rgba(135,206,235,0.4) 0%, transparent 60%);
+            /* Yahan apni image lagayein: */
+            /* background-image: url('path-to-your-waterfall-image.png'); */
+            background-size: 100% auto;
+            background-repeat: repeat-y;
+            background-position: center top;
         }
 
         .btn-blue {
@@ -35,14 +45,18 @@
             font-weight: 600;
             font-size: 14px;
             transition: all 0.3s;
+            position: relative;
+            z-index: 20;
         }
         .btn-blue:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,91,255,0.3); }
 
         /* Floating Animation */
-        .float { animation: floating 3s ease-in-out infinite; }
+        .float { animation: floating 4s ease-in-out infinite; }
+        .float-delay { animation: floating 4s ease-in-out infinite 2s; }
+        
         @keyframes floating {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-25px); }
             100% { transform: translateY(0px); }
         }
     </style>
@@ -50,20 +64,20 @@
 <body>
 
     <header class="hero-section relative flex flex-col items-center pt-20 px-6 text-center">
-        <h1 class="text-white text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
+        <h1 class="text-white text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-md">
             PRIYANSH RAWAT <br> WEBSITE CREATION 
         </h1>
         <button class="btn-blue mb-20">Start Now</button>
 
-        <div class="relative w-full max-w-4xl mt-10">
-            <div class="bg-[#D35400] w-64 h-64 mx-auto rounded-t-full relative z-10 shadow-2xl overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#E67E22] to-transparent"></div>
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 w-16 h-full bg-blue-300/60 blur-md"></div>
-            </div>
+        <div class="relative w-full max-w-4xl mt-10 z-10 flex flex-col items-center justify-center">
+            <img src="asset_mountain.png" alt="3D Mountain Image Placeholder" class="max-w-xs md:max-w-md float">
+            <p class="text-white/50 font-bold text-center mt-4">Place Top Mountain Image Here (`asset_mountain.png`)</p>
         </div>
     </header>
 
-    <div class="pathway h-[4000px] top-[80vh]"></div>
+    <div class="pathway-container flex flex-col items-center justify-center">
+        <p class="text-blue-700/50 font-bold text-center relative z-10">Add Continuous Waterfall Image Background to `.pathway-container`</p>
+    </div>
 
     <main class="relative z-10 max-w-6xl mx-auto px-6 py-20 space-y-40">
 
@@ -73,12 +87,9 @@
                 <p class="text-gray-600 mb-6 max-w-sm">Create a website with 500+ designer-made templates for any business.</p>
                 <button class="btn-blue">Start Now</button>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="float bg-blue-100 w-80 h-80 rounded-full flex items-center justify-center relative">
-                    <div class="absolute -top-10 -right-10 bg-pink-200 p-10 rounded-2xl shadow-lg rotate-12"></div>
-                    <div class="absolute -bottom-5 -left-5 bg-orange-200 p-10 rounded-2xl shadow-lg -rotate-12"></div>
-                    <div class="bg-white p-20 rounded-2xl shadow-2xl"></div>
-                </div>
+            <div class="md:w-1/2 flex flex-col items-center justify-center">
+                <img src="asset_templates.png" alt="3D Flying Templates Image Placeholder" class="max-w-xs md:max-w-sm float">
+                <p class="text-blue-500 font-semibold mt-4">Add 3D Envelopes/Templates Image (`asset_templates.png`)</p>
             </div>
         </section>
 
@@ -88,10 +99,9 @@
                 <p class="text-gray-600 mb-6 max-w-sm">Design and customize every detail of your website exactly how you want.</p>
                 <button class="btn-blue">Start Now</button>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="float bg-orange-100 w-80 h-80 rounded-[4rem] relative flex items-center justify-center">
-                    <img src="https://img.icons8.com/clouds/200/laptop.png" alt="Drag and Drop">
-                </div>
+            <div class="md:w-1/2 flex flex-col items-center justify-center">
+                <img src="asset_laptop.png" alt="3D Laptop/Cursor Image Placeholder" class="max-w-xs md:max-w-sm float-delay">
+                <p class="text-orange-500 font-semibold mt-4">Add 3D Laptop Image (`asset_laptop.png`)</p>
             </div>
         </section>
 
@@ -101,10 +111,9 @@
                 <p class="text-gray-600 mb-6 max-w-sm">Look amazing on every screen with a mobile-friendly version of your website.</p>
                 <button class="btn-blue">Start Now</button>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="float bg-purple-100 w-64 h-[400px] rounded-[3rem] border-8 border-white shadow-2xl overflow-hidden">
-                    <div class="bg-gradient-to-b from-blue-400 to-purple-500 h-full w-full"></div>
-                </div>
+            <div class="md:w-1/2 flex flex-col items-center justify-center">
+                <img src="asset_mobile.png" alt="3D Mobile Phone Image Placeholder" class="max-w-xs md:max-w-sm float">
+                 <p class="text-purple-500 font-semibold mt-4">Add 3D Mobile Phone Image (`asset_mobile.png`)</p>
             </div>
         </section>
 
@@ -114,17 +123,13 @@
                 <p class="text-gray-600 mb-6 max-w-sm">Get a professional domain name that matches your brand and business.</p>
                 <button class="btn-blue">Start Now</button>
             </div>
-            <div class="md:w-1/2 flex justify-center">
-                <div class="float w-80 h-80 relative">
-                    <div class="absolute inset-0 bg-blue-400 rounded-full blur-3xl opacity-30"></div>
-                    <div class="border-4 border-blue-200 w-full h-full rounded-full flex items-center justify-center">
-                        <div class="bg-blue-600 text-white p-6 rounded-full font-bold">.com</div>
-                    </div>
-                </div>
+            <div class="md:w-1/2 flex flex-col items-center justify-center">
+                <img src="asset_domain.png" alt="3D Domain Platform Image Placeholder" class="max-w-xs md:max-w-sm float-delay">
+                 <p class="text-blue-500 font-semibold text-center mt-4">Add 3D Domain Platform Image (`asset_domain.png`)</p>
             </div>
         </section>
 
-        <section class="text-center py-20 space-y-8">
+        <section class="text-center py-20 space-y-8 relative z-20">
             <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900">
                 Make Your Ideas Come <br> to Life with a Wix Site
             </h2>
@@ -133,14 +138,14 @@
 
     </main>
 
-    <footer class="bg-white py-10 text-center border-t">
-        <p class="text-2xl font-black text-gray-800 mb-4">WIX</p>
+    <footer class="bg-white py-10 text-center border-t relative z-20">
+        <p class="text-2xl font-black text-gray-800 mb-4">PRI NETWORK</p>
         <div class="text-xs text-gray-400 space-x-4">
-            <span>About</span>
-            <span>Policy</span>
-            <span>Terms of Use</span>
+            <a href="#" class="hover:text-blue-500">About</a>
+            <a href="#" class="hover:text-blue-500">Policy</a>
+            <a href="#" class="hover:text-blue-500">Terms of Use</a>
         </div>
-        <p class="text-[10px] text-gray-300 mt-6">© 2006-2024 Wix.com Inc</p>
+        <p class="text-[10px] text-gray-300 mt-6">© 2006-2024 Priyansh Rawat</p>
     </footer>
 
 </body>
