@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pro UI Clone</title>
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Locomotive Scroll -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceEdu | Explore Earth</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div id="cursor"></div>
+    <nav class="navbar">
+        <div class="logo">spaceedu</div>
+        <div class="nav-links">
+            <span>Planets</span>
+            <span>Trailer</span>
+            <span>Tickets</span>
+            <span>Blog</span>
+        </div>
+        <button class="enroll-btn">Enroll</button>
+    </nav>
 
-<div data-scroll-container>
+    <div class="scroll-container">
+        <section class="panel hero">
+            <div class="content">
+                <p class="subtitle">PLANET</p>
+                <h1>EARTH</h1>
+                <p class="desc">Learn more about this fascinating miracle that we call our home, Planet Earth. Course enrollment starts today.</p>
+                <button class="btn-main">GET STARTED</button>
+            </div>
+        </section>
 
-  <section class="hero">
-    <h1 data-scroll data-scroll-speed="2">Modern UI Clone</h1>
-    <p data-scroll data-scroll-speed="1">Smooth + Premium + Animated</p>
-  </section>
-
-  <section class="cards">
-
-    <div class="card" data-scroll data-scroll-speed="2">
-      <h2>Design</h2>
+        <section class="panel details">
+            <div class="content-left">
+                <p class="subtitle">THE BLUE PLANET</p>
+                <h2>EARTH</h2>
+                <p class="desc">Earth is the third planet from the Sun. It is the only astronomical object known to harbor life.</p>
+                <button class="btn-main">LEARN MORE</button>
+            </div>
+        </section>
     </div>
 
-    <div class="card" data-scroll data-scroll-speed="-2">
-      <h2>Animation</h2>
+    <div class="planet-wrapper">
+        <div class="planet-shadow"></div>
+        <div class="earth"></div>
     </div>
 
-    <div class="card" data-scroll data-scroll-speed="1">
-      <h2>Experience</h2>
-    </div>
-
-  </section>
-
-</div>
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-<!-- Locomotive -->
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
-<script src="script.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
