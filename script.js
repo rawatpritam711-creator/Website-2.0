@@ -1,18 +1,27 @@
-let slides = document.querySelectorAll(".slide");
-let counter = document.getElementById("counter");
+// Locomotive Scroll
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
+});
 
-let index = 0;
+// GSAP Animation
+gsap.from(".hero h1", {
+  y:100,
+  opacity:0,
+  duration:1
+});
 
-function showSlide(){
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[index].classList.add("active");
+gsap.from(".hero p", {
+  y:50,
+  opacity:0,
+  duration:1,
+  delay:0.5
+});
 
-  counter.innerText = "0" + (index+1) + " / 03";
+// Mouse Glow
+const cursor = document.getElementById("cursor");
 
-  index++;
-  if(index === slides.length){
-    index = 0;
-  }
-}
-
-setInterval(showSlide, 4000);
+document.addEventListener("mousemove", (e)=>{
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
