@@ -3,129 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpaceEdu - Reality</title>
+    <title>Ecoshire - Modern Retreat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;900&display=swap');
-
-        body, html { margin: 0; padding: 0; background: #010409; color: white; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
-
-        /* Navigation */
-        nav { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; padding: 30px 60px; z-index: 10; align-items: center; box-sizing: border-box; }
-        .logo { font-weight: 900; letter-spacing: 5px; font-size: 1.2rem; }
-        .links { display: flex; gap: 25px; }
-        .links a { color: #fff; text-decoration: none; font-size: 0.8rem; opacity: 0.7; letter-spacing: 2px; }
-        .enroll { border: 1px solid #ffffff40; background: rgba(255,255,255,0.05); color: white; padding: 10px 30px; border-radius: 30px; backdrop-filter: blur(5px); cursor: pointer; }
-
-        /* Hero Content */
-        .content { position: relative; z-index: 2; height: 200vh; pointer-events: none; }
-        .section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; box-sizing: border-box; }
-        .section.left { align-items: flex-start; text-align: left; }
-
-        .eyebrow { color: #4facfe; letter-spacing: 8px; font-size: 0.8rem; margin-bottom: 10px; }
-        h1 { font-size: clamp(3rem, 10vw, 7rem); font-weight: 900; letter-spacing: 25px; margin: 0; line-height: 1; }
-        .desc { max-width: 500px; opacity: 0.6; line-height: 1.8; margin-top: 20px; font-size: 0.9rem; }
-        .btn { margin-top: 40px; padding: 15px 45px; border-radius: 50px; border: none; background: #fff; font-weight: 900; cursor: pointer; pointer-events: all; }
-
-        /* 3D Canvas Container */
-        #canvas-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('your-image-url.jpg');
+            background-size: cover;
+            border-radius: 40px;
+        }
     </style>
 </head>
-<body>
+<body class="p-6">
 
-    <nav>
-        <div class="logo">SPACEEDU</div>
-        <div class="links">
-            <a href="#">PLANETS</a>
-            <a href="#">TRAILER</a>
-            <a href="#">TICKETS</a>
-            <a href="#">BLOG</a>
+    <header class="hero-bg h-[500px] relative flex flex-col justify-between p-10 text-white overflow-hidden">
+        <div class="flex justify-between items-center">
+            <h1 class="text-4xl font-bold leading-tight">Your Modern <br> Retreat Today!</h1>
+            <div class="flex gap-2">
+                <span class="px-4 py-1 border border-white/50 rounded-full text-xs backdrop-blur-md">nature</span>
+                <span class="px-4 py-1 border border-white/50 rounded-full text-xs backdrop-blur-md">modern</span>
+            </div>
         </div>
-        <button class="enroll">Enroll</button>
-    </nav>
+        
+        <button class="bg-white text-black px-6 py-2 rounded-full w-fit font-semibold flex items-center gap-2">
+            GET STARTED <span class="bg-black text-white rounded-full p-1 text-[10px]">→</span>
+        </button>
+    </header>
 
-    <div id="canvas-container"></div>
+    <section class="mt-10 bg-[#2d1b15] rounded-[40px] p-10 flex flex-col md:flex-row gap-10 items-center">
+        
+        <div class="bg-white rounded-3xl p-6 shadow-2xl w-full max-w-sm">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-lg">Booking is confirmed!</h3>
+                <img src="https://via.placeholder.com/50" class="rounded-xl" alt="thumb">
+            </div>
+            
+            <div class="space-y-3 text-sm text-gray-600">
+                <div class="flex justify-between border-b pb-2"><span>Check In</span> <span class="font-semibold text-black">10.07.2023</span></div>
+                <div class="flex justify-between border-b pb-2"><span>Check Out</span> <span class="font-semibold text-black">12.08.2023</span></div>
+                <div class="flex justify-between border-b pb-2"><span>Guests</span> <span class="font-semibold text-black">5 people</span></div>
+            </div>
 
-    <main class="content">
-        <section class="section">
-            <p class="eyebrow">PLANET</p>
-            <h1>EARTH</h1>
-            <p class="desc">Learn more about this fascinating miracle that we call our home, Planet Earth. Course enrollment starts today.</p>
-            <button class="btn">GET STARTED</button>
-        </section>
+            <button class="w-full mt-6 bg-[#3d2a23] text-white py-3 rounded-xl font-medium">
+                Booking details
+            </button>
+        </div>
 
-        <section class="section left">
-            <p class="eyebrow">THE BLUE PLANET</p>
-            <h1 style="font-size: 4rem; letter-spacing: 10px;">EARTH</h1>
-            <p class="desc">Earth is the third planet from the sun. It is an ocean planet. Water covers 70% of Earth's surface.</p>
-            <button class="btn" style="background: transparent; border: 1px solid white; color: white;">LEARN MORE</button>
-        </section>
-    </main>
+        <div class="text-white flex-1">
+            <h2 class="text-5xl font-light mb-4">Book Your Magical <br> Getaway Now!</h2>
+            <p class="text-gray-400 mb-6 max-w-md">Expand your knowledge, connect with the community and create a personalised network that is right for you.</p>
+            
+            <div class="flex items-center gap-4">
+                <button class="border border-white/30 px-6 py-2 rounded-full hover:bg-white hover:text-black transition">
+                    Join community
+                </button>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <script>
-        // 1. Setup Three.js Scene
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('canvas-container').appendChild(renderer.domElement);
-
-        // 2. Create Earth Sphere
-        const geometry = new THREE.SphereGeometry(2, 64, 64);
-        const textureLoader = new THREE.TextureLoader();
-        // High quality earth texture
-        const earthTexture = textureLoader.load('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg');
-        const material = new THREE.MeshPhongMaterial({ 
-            map: earthTexture,
-            shininess: 5
-        });
-        const earth = new THREE.Mesh(geometry, material);
-        scene.add(earth);
-
-        // 3. Add Lights (Isse Earth real lagegi)
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
-        scene.add(ambientLight);
-
-        const mainLight = new THREE.DirectionalLight(0xffffff, 1);
-        mainLight.position.set(5, 3, 5);
-        scene.add(mainLight);
-
-        camera.position.z = 5;
-
-        // 4. Scroll Animation (GSAP)
-        gsap.registerPlugin(ScrollTrigger);
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".content",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1
-            }
-        });
-
-        // Video wala transition: Earth side mein jayegi aur zoom hogi
-        tl.to(earth.position, { x: 2.5, y: 0.5, z: 1 }, 0);
-        tl.to(earth.rotation, { y: Math.PI }, 0);
-        tl.to(".section:first-child", { opacity: 0, y: -50 }, 0);
-
-        // 5. Animation Loop
-        function animate() {
-            requestAnimationFrame(animate);
-            earth.rotation.y += 0.002; // Slow rotation like real earth
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        // Handle Resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
 </body>
 </html>
