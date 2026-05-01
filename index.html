@@ -2,52 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ocean UI Pro</title>
+  <title>Pro UI Clone</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- Locomotive Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
 </head>
 <body>
 
-<div class="container">
+<div id="cursor"></div>
 
-  <!-- Navbar -->
-  <nav>
-    <h2 class="logo">Amway</h2>
-    <ul>
-      <li class="active">HOME</li>
-      <li>ABOUT</li>
-      <li>PRODUCTS</li>
-      <li>SERVICE</li>
-      <li>CONTACT</li>
-    </ul>
-  </nav>
+<div data-scroll-container>
 
-  <!-- Slider -->
-  <div class="hero">
+  <section class="hero">
+    <h1 data-scroll data-scroll-speed="2">Modern UI Clone</h1>
+    <p data-scroll data-scroll-speed="1">Smooth + Premium + Animated</p>
+  </section>
 
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')">
-      <div class="overlay"></div>
+  <section class="cards">
 
-      <div class="content">
-        <div class="left">
-          <h1>Happiness<br>comes<br>in waves</h1>
-          <p>Feel the ocean vibes with smooth UI design</p>
-          <button>READ MORE</button>
-        </div>
-
-        <div class="right">
-          <h1>FLOW<br>WITH<br>IT</h1>
-          <span id="counter">01 / 03</span>
-        </div>
-      </div>
+    <div class="card" data-scroll data-scroll-speed="2">
+      <h2>Design</h2>
     </div>
 
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e')"></div>
+    <div class="card" data-scroll data-scroll-speed="-2">
+      <h2>Animation</h2>
+    </div>
 
-  </div>
+    <div class="card" data-scroll data-scroll-speed="1">
+      <h2>Experience</h2>
+    </div>
+
+  </section>
 
 </div>
 
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- Locomotive -->
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
 <script src="script.js"></script>
+
 </body>
 </html>
